@@ -1,0 +1,189 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9; /* Warna latar belakang yang lembut */
+}
+
+/* Container utama untuk daftar pekerjaan */
+.job-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Judul daftar pekerjaan */
+.job-list-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff; /* Warna biru */
+  font-weight: bold;
+}
+
+/* Kontainer untuk filter */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Label untuk filter */
+.filter-container label {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #555; /* Warna abu-abu */
+}
+
+/* Dropdown untuk filter */
+.filter-container select {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc; /* Garis batas */
+  border-radius: 5px; /* Sudut melengkung */
+  transition: all 0.3s ease;
+}
+
+/* Efek hover dan fokus pada dropdown */
+.filter-container select:hover,
+.filter-container select:focus {
+  border-color: #007bff; /* Warna biru saat hover/fokus */
+  outline: none; /* Menghilangkan outline default */
+}
+
+/* Kontainer untuk daftar pekerjaan */
+.job-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Jarak antar item */
+  justify-content: center; /* Rata tengah */
+}
+
+/* Pesan jika tidak ada pekerjaan ditemukan */
+.no-jobs-message {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #888; /* Warna abu-abu */
+}
+
+/* Kontainer untuk kartu pekerjaan */
+.job-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif */
+  gap: 20px; /* Jarak antar kartu */
+  width: 100%;
+}
+
+/* Gaya untuk setiap kartu pekerjaan */
+.job-card {
+  background: #fff; /* Warna latar belakang putih */
+  border-radius: 10px; /* Sudut melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+  padding: 20px; /* Ruang dalam */
+  transition: transform 0.2s, box-shadow 0.2s; /* Transisi halus */
+  cursor: pointer; /* Kursor tangan saat hover */
+}
+
+/* Efek hover pada kartu pekerjaan */
+.job-card:hover {
+  transform: translateY(-5px); /* Mengangkat kartu saat hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bayangan lebih dalam saat hover */
+}
+
+/* Gaya untuk detail kartu pekerjaan */
+.job-card-detail {
+  margin-bottom: 10px; /* Jarak antar detail */
+  font-size: 1rem; /* Ukuran font */
+  color: #333; /* Warna teks */
+}
+
+/* Gaya untuk teks tebal dalam detail */
+.job-card-detail strong {
+  color: #007bff; /* Warna biru untuk teks tebal */
+}
+
+/* Kontainer untuk tombol apply */
+.apply-button-container {
+  margin-top: 10px; /* Jarak atas */
+  text-align: center; /* Rata tengah */
+}
+
+/* Gaya untuk tombol apply */
+.apply-button {
+  padding: 10px 20px; /* Ruang dalam */
+  font-size: 1rem; /* Ukuran font */
+  color: #fff; /* Warna teks putih */
+  background-color: #007bff; /* Warna biru */
+  border: none; /* Tanpa garis batas */
+  border-radius: 5px; /* Sudut melengkung */
+  cursor: pointer; /* Kursor tangan saat hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transisi halus */
+}
+
+/* Efek hover pada tombol apply */
+.apply-button:hover {
+  background-color: #0056b3; /* Warna biru lebih gelap saat hover */
+  transform: scale(1.05); /* Membesar sedikit saat hover */
+}
+
+/* Gaya untuk tombol yang dinonaktifkan */
+.apply-button.disabled {
+  background-color: #6c757d; /* Warna abu-abu untuk tombol dinonaktifkan */
+  cursor: not-allowed; /* Kursor tidak diizinkan */
+}
+
+/* Media query untuk responsif */
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column; /* Mengatur filter dalam kolom */
+    gap: 10px; /* Jarak antar filter */
+  }
+
+  .job-card {
+    padding: 15px; /* Mengurangi padding pada kartu */
+  }
+
+  .apply-button {
+    padding: 8px 16px; /* Mengurangi padding pada tombol */
+    font-size: 0.9rem; /* Ukuran font lebih kecil */
+  }
+}
+
+.filter-container {
+  margin-bottom: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1;
+  max-height: 200px; /* Batas tinggi */
+  overflow-y: auto; /* Scroll jika terlalu banyak opsi */
+}
+
+.checkbox-container {
+  padding: 5px 10px;
+}
+
+.checkbox-container input {
+  margin-right: 5px;
+}
